@@ -17,7 +17,7 @@ public class Config {
     FileInputStream FIS;
     {
         try {
-            FIS = new FileInputStream("src/ConfigFiles/config.properties");
+            FIS = new FileInputStream("Client/src/ConfigFiles/config.properties");
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }

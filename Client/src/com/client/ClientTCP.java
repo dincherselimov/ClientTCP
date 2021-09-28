@@ -12,10 +12,11 @@ import java.net.*;
 public class ClientTCP {
     public static void main(String[] args) throws IOException {
 
-        Socket socket = new Socket("localhost",93);
+        Socket socket = new Socket("localhost",Config.getInstance().getPort());
 
         if(args[0].equals("1")){
-            String location = "D:\\Manik\\ClientTCP\\Client\\src\\ConfigFiles\\";
+            //Send file with location path + file_name
+            String location = Config.getInstance().getAbsolute_path();
             SendFile sendFile = new SendFile(new BufferedOutputStream(socket.getOutputStream()),
                     new BufferedInputStream(new FileInputStream(location + "/SSHKey.txt")));
             sendFile.SendFileToServer();
@@ -27,9 +28,6 @@ public class ClientTCP {
             sendString.SendStringToSearch();
         }
             socket.close();
-
-
-
     }
 
 

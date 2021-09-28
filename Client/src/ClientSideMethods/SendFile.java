@@ -23,7 +23,6 @@ public class SendFile{
      * and Server.java class should accept the file and save it to a directory
      */
     public void SendFileToServer() throws IOException {
-
         try {
             //Write data
             byte[] b = new byte[1024 * 8];

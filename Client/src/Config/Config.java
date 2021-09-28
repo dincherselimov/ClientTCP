@@ -28,7 +28,7 @@ public class Config {
     Properties prop = new Properties();
 
     //Loading the config.properties file
-    private Config () throws IOException {
+    public Config() throws IOException {
         prop = new Properties();
         prop.load(FIS);
         FIS.close();

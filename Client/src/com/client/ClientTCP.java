@@ -17,6 +17,7 @@ public class ClientTCP {
         if(args[0].equals("1")){
             //Send file with location path + file_name
             String location = Config.getInstance().getAbsolute_path();
+
             SendFile sendFile = new SendFile(new BufferedOutputStream(socket.getOutputStream()),
                     new BufferedInputStream(new FileInputStream(location + "/SSHKey.txt")));
             sendFile.SendFileToServer();

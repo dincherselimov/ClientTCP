@@ -18,7 +18,7 @@ public class TestClientPath {
         //Getting the path form config.properties
         String path = config.getAbsolute_path();
         //Compares whether the paths are equal or not
-        assertEquals("D:\\Java\\ClientTCP\\Client\\src\\ConfigFiles",path);
+        assertEquals("D:\\Manik\\ClientTCP\\Client\\src\\ConfigFiles",path);
         System.out.println("Test passed!");
         System.out.println("Paths are equal!");
     }

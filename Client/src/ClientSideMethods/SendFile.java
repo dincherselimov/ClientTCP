@@ -1,9 +1,6 @@
 package ClientSideMethods;
 
-import java.io.BufferedInputStream;
-import java.io.BufferedOutputStream;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.io.*;
 import java.net.Socket;
 
 /**
@@ -12,17 +9,21 @@ import java.net.Socket;
 public class SendFile{
     BufferedInputStream bis;
     BufferedOutputStream bos;
+    PrintWriter pr;
 
     //create a constructor
     public SendFile(BufferedOutputStream bos, BufferedInputStream bis) {
         this.bis = bis;
         this.bos = bos;
+        this.pr = new PrintWriter(bos);
     }
     /**
      * This method send file to the Server.java class
      * and Server.java class should accept the file and save it to a directory
      */
     public void SendFileToServer() throws IOException {
+        pr.println("1;dt1.txt");
+        pr.flush();
         try {
             //Write data
             byte[] b = new byte[1024 * 8];

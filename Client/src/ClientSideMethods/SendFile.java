@@ -18,11 +18,12 @@ public class SendFile{
         this.bis = bis;
         this.bos = bos;
     }
+
     /**
      * This method send file to the Server.java class
-     * and Server.java class should accept the file and save it to a directory
+     * @throws IOException
      */
-    public void SendFileToServer() throws IOException {
+    public void sendFileToServer() throws IOException {
         try {
             //Write data
             byte[] b = new byte[1024 * 8];

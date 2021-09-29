@@ -19,16 +19,14 @@ public class ClientTCP {
             String location = Config.getInstance().getAbsolute_path();
             SendFile sendFile = new SendFile(new BufferedOutputStream(socket.getOutputStream()),
                     new BufferedInputStream(new FileInputStream(location + "/SSHKey.txt")));
-            sendFile.SendFileToServer();
+            sendFile.sendFileToServer();
         }
         else if(args[0].equals("2")){
 
             SendString sendString = new SendString(socket.getOutputStream(),socket.getInputStream());
 
-            sendString.SendStringToSearch();
+            sendString.sendStringToSearch();
         }
             socket.close();
     }
-
-
 }

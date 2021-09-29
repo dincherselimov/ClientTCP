@@ -12,7 +12,6 @@ public class TestClientSearchedString {
      * @asserEquals //Checks if the port is as expected
      */
     @Test
-
     public void testConfigString() throws IOException {
         Config config = new Config();
         //Getting the searched string from config.properties

@@ -10,6 +10,7 @@ import java.net.*;
  * Chooses which method to run as an argument
  */
 public class ClientTCP {
+
     public static void main(String[] args) throws IOException {
 
         Socket socket = new Socket("localhost",Config.getInstance().getPort());

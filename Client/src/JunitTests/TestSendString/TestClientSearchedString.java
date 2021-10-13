@@ -1,4 +1,4 @@
-package JunitTests;
+package JunitTests.TestSendString;
 
 import Config.*;
 import org.junit.Test;

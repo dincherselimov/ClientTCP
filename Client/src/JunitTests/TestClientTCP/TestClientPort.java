@@ -1,4 +1,4 @@
-package JunitTests;
+package JunitTests.TestClientTCP;
 
 import Config.*;
 import org.junit.Test;
@@ -14,14 +14,16 @@ public class TestClientPort {
     @Test
 
     public void testConfigPort() throws IOException {
+
         Config config = new Config();
         //Getting the port form config.properties
+
         int port = config.getPort();
+
         //Compares whether the ports are equal or not
         assertEquals(80,port);
         System.out.println("Test passed!");
         System.out.println("Ports are equal!");
     }
-
 }
 
